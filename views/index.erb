@@ -2,410 +2,321 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/style.css">
     <title>國際主要國家貨幣每月匯率概況</title>
-    <style>
-        * {
-            font-family: Microsoft JhengHei;
-        }
-        
-        .container-fluid {
-            width: 100%;
-            max-width: 1024px;
-        }
-        
-        .mx-auto {
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        table {
-            width: 100%;
-        }
-        
-        h1 {
-            font-size: 37px;
-        }
-        
-        .border-2 {
-            border-width: 1.5px !important;
-        }
-        
-        a {
-            color: black;
-        }
-        
-        a:hover {
-            color: black;
-            text-decoration: none;
-        }
-        
-        p {
-            background-color: #ebf4ff;
-        }
-    </style>
 </head>
-
 <body>
-
     <div class="container-fluid mx-auto">
-        <h1 class="text-dark font-weight-lighter mt-3 ">國際主要國家貨幣每月匯率概況</h1>
+        <h1 class="text-dark font-weight-lighter mt-3">國際主要國家貨幣每月匯率概況</h1>
         <hr class="my-4">
-        <span class="font-weight-lighter h5">月份
-            <%=@month[12]%>
-        </span>
-        <table class=" border border-2 border-secondary mb-4 mt-1  shadow">
+        <span class="font-weight-lighter h5">月份<%= @month[12] %></span>
+        <table class="border border-2 border-secondary mb-4 mt-1 shadow">
             <thead>
                 <tr>
-                    <th class="border px-4 py-2  h6 small text-center font-weight-bold">幣別</th>
-                    <% @dollor.each do |dollor| %>
-                        <th class="border h6 small px-4 py-2 text-center font-weight-bold ">
-                            <%= dollor %>
-
-                        </th>
+                    <th class="border px-4 py-2 h6 small text-center font-weight-bold">幣別</th>
+                        <% @dollor.each do |dollor| %>
+                    <th class="border h6 small px-4 py-2 text-center font-weight-bold">
+                        <%= dollor %>
+                    </th>
                         <% end %>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <th class="border border h6 small text-center font-weight-bold ">匯率</th>
-                    <% @rate2003.each do |rate| %>
-                        <th class=" border border px-4 py-2 text-danger h5 font-weight-lighter text-center ">
-                            <%= rate %>
-                        </th>
+                    <th class="border border h6 small text-center font-weight-bold">匯率</th>
+                        <% @rate2003.each do |rate| %>
+                    <th class=" border border px-4 py-2 text-danger h5 font-weight-lighter text-center">
+                        <%= rate %>
+                    </th>
                         <% end %>
                 </tr>
             </tbody>
         </table>
-        <span class="font-weight-lighter h5">月份
-            <%=@month[11]%>
-            </span>
-        <table class=" border border-2 border-secondary mb-4 mt-1  shadow">
+        <span class="font-weight-lighter h5">月份<%= @month[11] %></span>
+        <table class="border border-2 border-secondary mb-4 mt-1 shadow">
             <thead>
                 <tr>
-                    <th class="border px-4 py-2  h6 small text-center font-weight-bold">幣別</th>
-                    <% @dollor.each do |dollor| %>
-                        <th class=" border h6 small px-4 py-2 text-center font-weight-bold ">
-                            <%= dollor %>
-
-                        </th>
+                    <th class="border px-4 py-2 h6 small text-center font-weight-bold">幣別</th>
+                        <% @dollor.each do |dollor| %>
+                    <th class="border h6 small px-4 py-2 text-center font-weight-bold">
+                        <%= dollor %>
+                    </th>
                         <% end %>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <th class="border h6 small text-center font-weight-bold ">匯率</th>
-                    <% @rate2002.each do |rate| %>
-                        <th class=" border px-4 py-2 text-danger h5 font-weight-lighter text-center ">
-                            <%= rate %>
-                        </th>
+                        <% @rate2002.each do |rate| %>
+                    <th class="border px-4 py-2 text-danger h5 font-weight-lighter text-center">
+                        <%= rate %>
+                    </th>
+                        <% end %>
+                </tr>
+            </tbody>
+        </table>
+        <span class="font-weight-lighter h5">月份<%= @month[10] %></span>
+        <table class=" border border-2 border-secondary mb-4 mt-1 shadow">
+            <thead>
+                <tr>
+                    <th class="border px-4 py-2 h6 small text-center font-weight-bold">幣別</th>
+                        <% @dollor.each do |dollor| %>
+                    <th class=" border h6 small px-4 py-2 text-center font-weight-bold">
+                        <%= dollor %>
+                    </th>
+                        <% end %>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="border h6 small text-center font-weight-bold">匯率</th>
+                        <% @rate2001.each do |rate| %>
+                    <th class="border px-4 py-2 text-danger h5 font-weight-lighter text-center">
+                        <%= rate %>
+                    </th>
                         <% end %>
                 </tr>
             </tbody>
         </table>
 
-        <span class="font-weight-lighter h5">月份
-            <%=@month[10]%>
-            </span>
-        <table class=" border border-2 border-secondary mb-4 mt-1  shadow">
+        <span class="font-weight-lighter h5">月份<%= @month[9] %></span>
+        <table class="border border-2 border-secondary mb-4 mt-1 shadow">
+            <thead>
+                <tr>
+                    <th class="border px-4 py-2 h6 small text-center font-weight-bold">幣別</th>
+                        <% @dollor.each do |dollor| %>
+                    <th class="border h6 small px-4 py-2 text-center font-weight-bold">
+                        <%= dollor %>
+                    </th>
+                        <% end %>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="border h6 small text-center font-weight-bold">匯率</th>
+                        <% @rate1912.each do |rate| %>
+                    <th class="border px-4 py-2 text-danger h5 font-weight-lighter text-center">
+                        <%= rate %>
+                    </th>
+                        <% end %>
+                </tr>
+            </tbody>
+        </table>
+
+        <span class="font-weight-lighter h5">月份<%= @month[8] %></span>
+        <table class="border border-2 border-secondary mb-4 mt-1 shadow">
             <thead>
                 <tr>
                     <th class="border px-4 py-2  h6 small text-center font-weight-bold">幣別</th>
-                    <% @dollor.each do |dollor| %>
-                        <th class=" border h6 small px-4 py-2 text-center font-weight-bold ">
-                            <%= dollor %>
+                        <% @dollor.each do |dollor| %>
+                    <th class="border h6 small px-4 py-2 text-center font-weight-bold">
+                        <%= dollor %>
+                    </th>
+                        <% end %>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="border h6 small text-center font-weight-bold">匯率</th>
+                        <% @rate1911.each do |rate| %>
+                    <th class="border px-4 py-2 text-danger h5 font-weight-lighter text-center">
+                        <%= rate %>
+                    </th>
+                        <% end %>
+                </tr>
+            </tbody>
+        </table>
+        <span class="font-weight-lighter h5">月份<%= @month[7] %></span>
+        <table class="border border-2 border-secondary mb-4 mt-1 shadow">
+            <thead>
+                <tr>
+                    <th class="border px-4 py-2 h6 small text-center font-weight-bold">幣別</th>
+                        <% @dollor.each do |dollor| %>
+                    <th class="border h6 small px-4 py-2 text-center font-weight-bold">
+                        <%= dollor %>
+                    </th>
+                        <% end %>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="border h6 small text-center font-weight-bold">匯率</th>
+                        <% @rate1910.each do |rate| %>
+                    <th class="border px-4 py-2 text-danger h5 font-weight-lighter text-center">
+                        <%= rate %>
+                    </th>
+                        <% end %>
+                </tr>
+            </tbody>
+        </table>
+        <span class="font-weight-lighter h5">月份<%= @month[6] %></span>
+        <table class="border border-2 border-secondary mb-4 mt-1 shadow">
+            <thead>
+                <tr>
+                    <th class="border px-4 py-2 h6 small text-center font-weight-bold">幣別</th>
+                        <% @dollor.each do |dollor| %>
+                    <th class="border h6 small px-4 py-2 text-center font-weight-bold">
+                        <%= dollor %>
+                    </th>
+                        <% end %>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="border h6 small text-center font-weight-bold">匯率</th>
+                        <% @rate1909.each do |rate| %>
+                    <th class="border px-4 py-2 text-danger h5 font-weight-lighter text-center">
+                        <%= rate %>
+                    </th>
+                        <% end %>
+                </tr>
+            </tbody>
+        </table>
 
-                        </th>
+        <span class="font-weight-lighter h5">月份<%= @month[5] %></span>
+        <table class="border border-2 border-secondary mb-4 mt-1 shadow">
+            <thead>
+                <tr>
+                    <th class="border px-4 py-2 h6 small text-center font-weight-bold">幣別</th>
+                        <% @dollor.each do |dollor| %>
+                    <th class="border h6 small px-4 py-2 text-center font-weight-bold">
+                        <%= dollor %>
+                    </th>
+                        <% end %>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="border h6 small text-center font-weight-bold">匯率</th>
+                        <% @rate1908.each do |rate| %>
+                    <th class="border px-4 py-2 text-danger h5 font-weight-lighter text-center">
+                        <%= rate %>
+                    </th>
+                        <% end %>
+                </tr>
+            </tbody>
+        </table>
+        <span class="font-weight-lighter h5">月份<%= @month[4] %></span>
+        <table class="border border-2 border-secondary mb-4 mt-1 shadow">
+            <thead>
+                <tr>
+                    <th class="border px-4 py-2 h6 small text-center font-weight-bold">幣別</th>
+                        <% @dollor.each do |dollor| %>
+                    <th class="border h6 small px-4 py-2 text-center font-weight-bold">
+                        <%= dollor %>
+                    </th>
+                        <% end %>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="border h6 small text-center font-weight-bold">匯率</th>
+                        <% @rate1907.each do |rate| %>
+                    <th class="border px-4 py-2 text-danger h5 font-weight-lighter text-center">
+                        <%= rate %>
+                    </th>
+                        <% end %>
+                </tr>
+            </tbody>
+        </table>
+        <span class="font-weight-lighter h5">月份<%= @month[3] %></span>
+        <table class="border border-2 border-secondary mb-4 mt-1 shadow">
+            <thead>
+                <tr>
+                    <th class="border px-4 py-2 h6 small text-center font-weight-bold">幣別</th>
+                        <% @dollor.each do |dollor| %>
+                    <th class="border h6 small px-4 py-2 text-center font-weight-bold">
+                        <%= dollor %>
+                    </th>
                         <% end %>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <th class="border h6 small text-center font-weight-bold ">匯率</th>
-                    <% @rate2001.each do |rate| %>
-                        <th class=" border px-4 py-2 text-danger h5 font-weight-lighter text-center ">
-                            <%= rate %>
-                        </th>
+                        <% @rate1906.each do |rate| %>
+                    <th class="border px-4 py-2 text-danger h5 font-weight-lighter text-center">
+                        <%= rate %>
+                    </th>
                         <% end %>
                 </tr>
             </tbody>
         </table>
-
-        <span class="font-weight-lighter h5">月份
-            <%= @month[9] %>
-            </span>
-        <table class=" border border-2 border-secondary mb-4 mt-1  shadow">
+        <span class="font-weight-lighter h5">月份<%= @month[2] %></span>
+        <table class="border border-2 border-secondary mb-4 mt-1 shadow">
             <thead>
                 <tr>
-                    <th class="border px-4 py-2  h6 small text-center font-weight-bold">幣別</th>
-                    <% @dollor.each do |dollor| %>
-                        <th class=" border h6 small px-4 py-2 text-center font-weight-bold ">
-                            <%= dollor %>
-
-                        </th>
+                    <th class="border px-4 py-2 h6 small text-center font-weight-bold">幣別</th>
+                        <% @dollor.each do |dollor| %>
+                    <th class="border h6 small px-4 py-2 text-center font-weight-bold">
+                        <%= dollor %>
+                    </th>
                         <% end %>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <th class="border h6 small text-center font-weight-bold ">匯率</th>
-                    <% @rate1912.each do |rate| %>
-                        <th class=" border px-4 py-2 text-danger h5 font-weight-lighter text-center ">
-                            <%= rate %>
-                        </th>
+                    <th class="border h6 small text-center font-weight-bold">匯率</th>
+                        <% @rate1905.each do |rate| %>
+                    <th class="border px-4 py-2 text-danger h5 font-weight-lighter text-center">
+                        <%= rate %>
+                    </th>
                         <% end %>
                 </tr>
             </tbody>
         </table>
 
-        <span class="font-weight-lighter h5">月份
-            <%= @month[8] %>
-            </span>
-        <table class=" border border-2 border-secondary mb-4 mt-1  shadow">
+        <span class="font-weight-lighter h5">月份<%= @month[1] %></span>
+        <table class="border border-2 border-secondary mb-4 mt-1 shadow">
             <thead>
                 <tr>
-                    <th class="border px-4 py-2  h6 small text-center font-weight-bold">幣別</th>
-                    <% @dollor.each do |dollor| %>
-                        <th class=" border h6 small px-4 py-2 text-center font-weight-bold ">
-                            <%= dollor %>
-
-                        </th>
+                    <th class="border px-4 py-2 h6 small text-center font-weight-bold">幣別</th>
+                        <% @dollor.each do |dollor| %>
+                    <th class="border h6 small px-4 py-2 text-center font-weight-bold">
+                        <%= dollor %>
+                    </th>
                         <% end %>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <th class="border h6 small text-center font-weight-bold ">匯率</th>
-                    <% @rate1911.each do |rate| %>
-                        <th class=" border px-4 py-2 text-danger h5 font-weight-lighter text-center ">
-                            <%= rate %>
-                        </th>
+                    <th class="border h6 small text-center font-weight-bold">匯率</th>
+                        <% @rate1904.each do |rate| %>
+                    <th class="border px-4 py-2 text-danger h5 font-weight-lighter text-center">
+                        <%= rate %>
+                    </th>
                         <% end %>
                 </tr>
             </tbody>
         </table>
-
-        <span class="font-weight-lighter h5">月份
-            <%= @month[7] %>
-            </span>
-        <table class=" border border-2 border-secondary mb-4 mt-1  shadow">
+        <span class="font-weight-lighter h5">月份<%= @month[0] %></span>
+        <table class="border border-2 border-secondary mb-4 mt-1 shadow">
             <thead>
                 <tr>
-                    <th class="border px-4 py-2  h6 small text-center font-weight-bold">幣別</th>
-                    <% @dollor.each do |dollor| %>
-                        <th class=" border h6 small px-4 py-2 text-center font-weight-bold ">
-                            <%= dollor %>
-
-                        </th>
+                    <th class="border px-4 py-2 h6 small text-center font-weight-bold">幣別</th>
+                        <% @dollor.each do |dollor| %>
+                    <th class="border h6 small px-4 py-2 text-center font-weight-bold">
+                        <%= dollor %>
+                    </th>
                         <% end %>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <th class="border h6 small text-center font-weight-bold ">匯率</th>
-                    <% @rate1910.each do |rate| %>
-                        <th class=" border px-4 py-2 text-danger h5 font-weight-lighter text-center ">
-                            <%= rate %>
-                        </th>
+                    <th class="border h6 small text-center font-weight-bold">匯率</th>
+                        <% @rate1903.each do |rate| %>
+                    <th class="border px-4 py-2 text-danger h5 font-weight-lighter text-center">
+                        <%= rate %>
+                    </th>
                         <% end %>
                 </tr>
             </tbody>
         </table>
-
-        <span class="font-weight-lighter h5">月份
-            <%= @month[6] %>
-            </span>
-        <table class=" border border-2 border-secondary mb-4 mt-1  shadow">
-            <thead>
-                <tr>
-                    <th class="border px-4 py-2  h6 small text-center font-weight-bold">幣別</th>
-                    <% @dollor.each do |dollor| %>
-                        <th class=" border h6 small px-4 py-2 text-center font-weight-bold ">
-                            <%= dollor %>
-
-                        </th>
-                        <% end %>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th class="border h6 small text-center font-weight-bold ">匯率</th>
-                    <% @rate1909.each do |rate| %>
-                        <th class=" border px-4 py-2 text-danger h5 font-weight-lighter text-center ">
-                            <%= rate %>
-                        </th>
-                        <% end %>
-                </tr>
-            </tbody>
-        </table>
-
-        <span class="font-weight-lighter h5">月份
-            <%= @month[5] %>
-            </span>
-        <table class=" border border-2 border-secondary mb-4 mt-1  shadow">
-            <thead>
-                <tr>
-                    <th class="border px-4 py-2  h6 small text-center font-weight-bold">幣別</th>
-                    <% @dollor.each do |dollor| %>
-                        <th class=" border h6 small px-4 py-2 text-center font-weight-bold ">
-                            <%= dollor %>
-
-                        </th>
-                        <% end %>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th class="border h6 small text-center font-weight-bold ">匯率</th>
-                    <% @rate1908.each do |rate| %>
-                        <th class=" border px-4 py-2 text-danger h5 font-weight-lighter text-center ">
-                            <%= rate %>
-                        </th>
-                        <% end %>
-                </tr>
-            </tbody>
-        </table>
-
-        <span class="font-weight-lighter h5">月份
-            <%= @month[4] %>
-            </span>
-        <table class=" border border-2 border-secondary mb-4 mt-1  shadow">
-            <thead>
-                <tr>
-                    <th class="border px-4 py-2  h6 small text-center font-weight-bold">幣別</th>
-                    <% @dollor.each do |dollor| %>
-                        <th class=" border h6 small px-4 py-2 text-center font-weight-bold ">
-                            <%= dollor %>
-
-                        </th>
-                        <% end %>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th class="border h6 small text-center font-weight-bold ">匯率</th>
-                    <% @rate1907.each do |rate| %>
-                        <th class=" border px-4 py-2 text-danger h5 font-weight-lighter text-center ">
-                            <%= rate %>
-                        </th>
-                        <% end %>
-                </tr>
-            </tbody>
-        </table>
-
-        <span class="font-weight-lighter h5">月份
-            <%= @month[3] %>
-            </span>
-        <table class=" border border-2 border-secondary mb-4 mt-1  shadow">
-            <thead>
-                <tr>
-                    <th class="border px-4 py-2  h6 small text-center font-weight-bold">幣別</th>
-                    <% @dollor.each do |dollor| %>
-                        <th class=" border h6 small px-4 py-2 text-center font-weight-bold ">
-                            <%= dollor %>
-
-                        </th>
-                        <% end %>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th class="border h6 small text-center font-weight-bold ">匯率</th>
-                    <% @rate1906.each do |rate| %>
-                        <th class=" border px-4 py-2 text-danger h5 font-weight-lighter text-center ">
-                            <%= rate %>
-                        </th>
-                        <% end %>
-                </tr>
-            </tbody>
-        </table>
-
-        <span class="font-weight-lighter h5">月份
-            <%= @month[2] %>
-            </span>
-        <table class=" border border-2 border-secondary mb-4 mt-1  shadow">
-            <thead>
-                <tr>
-                    <th class="border px-4 py-2  h6 small text-center font-weight-bold">幣別</th>
-                    <% @dollor.each do |dollor| %>
-                        <th class=" border h6 small px-4 py-2 text-center font-weight-bold ">
-                            <%= dollor %>
-
-                        </th>
-                        <% end %>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th class="border h6 small text-center font-weight-bold ">匯率</th>
-                    <% @rate1905.each do |rate| %>
-                        <th class=" border px-4 py-2 text-danger h5 font-weight-lighter text-center ">
-                            <%= rate %>
-                        </th>
-                        <% end %>
-                </tr>
-            </tbody>
-        </table>
-
-        <span class="font-weight-lighter h5">月份
-            <%= @month[1] %>
-            </span>
-        <table class=" border border-2 border-secondary mb-4 mt-1  shadow">
-            <thead>
-                <tr>
-                    <th class="border px-4 py-2  h6 small text-center font-weight-bold">幣別</th>
-                    <% @dollor.each do |dollor| %>
-                        <th class=" border h6 small px-4 py-2 text-center font-weight-bold ">
-                            <%= dollor %>
-
-                        </th>
-                        <% end %>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th class="border h6 small text-center font-weight-bold ">匯率</th>
-                    <% @rate1904.each do |rate| %>
-                        <th class=" border px-4 py-2 text-danger h5 font-weight-lighter text-center ">
-                            <%= rate %>
-                        </th>
-                        <% end %>
-                </tr>
-            </tbody>
-        </table>
-
-        <span class="font-weight-lighter h5">月份
-            <%= @month[0] %>
-            </span>
-        <table class=" border border-2 border-secondary mb-4 mt-1  shadow">
-            <thead>
-                <tr>
-                    <th class="border px-4 py-2  h6 small text-center font-weight-bold">幣別</th>
-                    <% @dollor.each do |dollor| %>
-                        <th class=" border h6 small px-4 py-2 text-center font-weight-bold ">
-                            <%= dollor %>
-
-                        </th>
-                        <% end %>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th class="border h6 small text-center font-weight-bold ">匯率</th>
-                    <% @rate1903.each do |rate| %>
-                        <th class=" border px-4 py-2 text-danger h5 font-weight-lighter text-center ">
-                            <%= rate %>
-                        </th>
-                        <% end %>
-                </tr>
-            </tbody>
-        </table>
-
-        <p class=" font-weight-lighter px-3 py-2">資料來源：
-            <a href="https://data.gov.tw/dataset/31897" target="_blank">政府資料開放平臺</a>
+        <p class="font-weight-lighter px-3 py-2">
+            資料來源：<a href="https://data.gov.tw/dataset/31897" target="_blank">政府資料開放平臺</a>
         </p>
     </div>
 </body>
